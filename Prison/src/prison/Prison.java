@@ -1,19 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package prison;
-
-/**
- *
- * @author Thea Jessica
- */
+import java.util.Scanner;
 public class Prison {
-
     public static void main(String[] args) {
-        Prisoner bubba = new Prisoner();
-        Prisoner twitch = new Prisoner();
-        System.out.println(bubba == twitch);//false
+        String name;
+        double height;
+        int sentence;
+
+        Scanner data = new Scanner (System.in);
+        Prisoner buba = new Prisoner("Jordan", 1.5, 10, "batam");
+        System.out.println(buba.name);
+        buba.tambah (10, 10);
+        buba.tambah (10, 10, 10);
+
+        System.out.println("Name : ");
+        name = data.nextLine();
+        System.out.println("Height : ");
+        height = data.nextDouble();
+        System.out.println ("Sentence : ");
+        sentence = data.nextInt();
+
+        System.out.println("Prisoner Data");
+        System.out.println("Name : "+name);
+        System.out.println("Height : "+height);
+        System.out.println("Sentence :"+sentence);
     }
-    
 }
