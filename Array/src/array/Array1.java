@@ -1,5 +1,5 @@
 package array;
-public class Array {
+public class Array1 {
     public static void main(String[] args) {
         String nama[] = new String[10];
         int umur[] = new int[4];
