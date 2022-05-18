@@ -1,5 +1,5 @@
 package pewarisan;
-
+import java.util.Scanner;
 class manusia {
     String nama;
     public void halo(){

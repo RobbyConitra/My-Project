@@ -13,6 +13,8 @@ public class Kalku {
         a = scan.nextDouble();
         System.out.print("Masukkan Angka Kedua : ");
         b = scan.nextDouble();
+        System.out.print("Hasil : "+a);
+        System.out.println(" + "+b);
         System.out.println("Hasil : "+(a+b));
         
     }
@@ -54,5 +56,15 @@ public class Kalku {
         b = scan.nextDouble();
         System.out.println("Hasil : "+(a/b));
         
+    }
+    
+    public void kuadrat () {
+        double a,b;
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("---Kuadrat---");
+        System.out.println("Masukkan Angka : ");
+        a = scan.nextDouble();
+        System.out.println("Hasil : "+(a*a));
     }
 }
