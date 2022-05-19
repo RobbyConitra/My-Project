@@ -1,69 +1,97 @@
 package kalkulator;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Kalku {
     
     public void tambah (){
-        double a,b;
+        Double hasil, a;
         Scanner scan = new Scanner(System.in);
+        ArrayList<Double> angka = new ArrayList();
         
         System.out.println("---Penjumlahan---");
-        System.out.print("Masukkan Angka Pertama : ");
-        a = scan.nextDouble();
-        System.out.print("Masukkan Angka Kedua : ");
-        b = scan.nextDouble();
-        System.out.print("Hasil : "+a);
-        System.out.println(" + "+b);
-        System.out.println("Hasil : "+(a+b));
+        do{
+            System.out.print("Masukkan Angka : ");
+            a = scan.nextDouble();
+            angka.add(a);
+        } while (a != 0);
+        hasil = 0.0;
         
+        for (Double i:angka){
+            hasil += i;
+        }
+        
+        System.out.println("Hasil : "+hasil);
     }
     
     public void kurang (){
-        double a,b;
+        Double hasil, a;
         Scanner scan = new Scanner(System.in);
+        ArrayList<Double> angka = new ArrayList();
         
         System.out.println("---Pengurangan---");
-        System.out.print("Masukkan Angka Pertama : ");
-        a = scan.nextDouble();
-        System.out.print("Masukkan Angka Kedua : ");
-        b = scan.nextDouble();
-        System.out.println("Hasil : "+(a-b));
+        do{
+            System.out.print("Masukkan Angka : ");
+            a = scan.nextDouble();
+            angka.add(a);
+        } while (a != 0);
+        hasil = angka.get(0);
         
+        for(int i = 1; i < angka.size();i++){
+            hasil = hasil-angka.get(i);
+        }
+        System.out.println("Hasil : "+hasil);
     }
     
     public void kali (){
-        double a,b;
+        Double hasil, a;
         Scanner scan = new Scanner(System.in);
+        ArrayList<Double> angka = new ArrayList();
         
         System.out.println("---Perkalian---");
-        System.out.print("Masukkan Angka Pertama : ");
-        a = scan.nextDouble();
-        System.out.print("Masukkan Angka Kedua : ");
-        b = scan.nextDouble();
-        System.out.println("Hasil : "+(a*b));
+        do{
+            System.out.print("Masukkan Angka : ");
+            a = scan.nextDouble();
+            angka.add(a);
+        } while (a != 0);
+        hasil = angka.get(0);
         
+        for(int i = 1; i < angka.size();i++){
+            if (i != angka.size()-1){
+                hasil = hasil*angka.get(i);
+            }
+        }
+        System.out.println("Hasil : "+hasil);
     }
     
     public void bagi (){
-        double a,b;
+        Double hasil, a;
         Scanner scan = new Scanner(System.in);
+        ArrayList<Double> angka = new ArrayList();
         
-        System.out.println("---Pembagian---");
-        System.out.print("Masukkan Angka Pertama : ");
-        a = scan.nextDouble();
-        System.out.print("Masukkan Angka Kedua : ");
-        b = scan.nextDouble();
-        System.out.println("Hasil : "+(a/b));
+        System.out.println("---Perkalian---");
+        do{
+            System.out.print("Masukkan Angka : ");
+            a = scan.nextDouble();
+            angka.add(a);
+        } while (a != 0);
+        hasil = angka.get(0);
         
+        for(int i = 1; i < angka.size();i++){
+            if (i != angka.size()-1){
+                hasil = hasil/angka.get(i);
+            }
+        }
+        System.out.println("Hasil : "+hasil);
     }
     
     public void kuadrat () {
-        double a,b;
+        double a;
         Scanner scan = new Scanner(System.in);
         
         System.out.println("---Kuadrat---");
-        System.out.println("Masukkan Angka : ");
+        System.out.print("Masukkan Angka : ");
         a = scan.nextDouble();
         System.out.println("Hasil : "+(a*a));
     }

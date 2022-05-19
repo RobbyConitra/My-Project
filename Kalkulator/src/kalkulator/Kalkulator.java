@@ -14,6 +14,7 @@ public class Kalkulator {
         System.out.println("2. Pengurangan");
         System.out.println("3. Perkalian");
         System.out.println("4. Pembagian");
+        System.out.println("5. Kuadrat");
         System.out.print("Pilihan : ");
         kode = scan.nextInt();
         
@@ -29,6 +30,9 @@ public class Kalkulator {
                 break;
             case 4 :
                 kalku.bagi();
+                break;
+            case 5 :
+                kalku.kuadrat();
                 break;
             default : System.out.println("ERROR!!!");
                 
